@@ -24,6 +24,7 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 # plugins
 zinit light zsh-users/zsh-autosuggestions
 zinit light jeffreytse/zsh-vi-mode
+export YSU_IGNORED_ALIASES=("g")
 zinit light MichaelAquilina/zsh-you-should-use
 zinit light zsh-users/zsh-syntax-highlighting
 
