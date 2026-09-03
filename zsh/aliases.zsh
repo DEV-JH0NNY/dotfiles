@@ -29,7 +29,8 @@ alias gac='git add . && git commit'
 # Gestión de ramas
 alias gb='git branch'
 alias gch='git checkout'
-alias gnb='git checkout -b'
+alias gs='git switch'
+alias gsc='git switch -c'
 
 # Operaciones remotas
 alias gcl='git clone'
