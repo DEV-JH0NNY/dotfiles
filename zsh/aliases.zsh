@@ -13,7 +13,7 @@ alias la='ls -la'
 # Reemplazo de 'cd' con 'zoxide'
 
 [[ -x "$(command -v eza)" ]] && eval "$(zoxide init zsh)" # habilitar zoxide
-[[ -x "$(command -v eza)" ]] && alias cd='z'
+# [[ -x "$(command -v eza)" ]] && alias cd='z', ya no lo reemplazamos para mantener compatibilidad
 
 # =============================================================================
 # Aliases de Git
@@ -28,7 +28,6 @@ alias gac='git add . && git commit'
 
 # Gestión de ramas
 alias gb='git branch'
-alias gch='git checkout'
 alias gs='git switch'
 alias gsc='git switch -c'
 
@@ -67,3 +66,10 @@ alias glg="git log \
         %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' \
     --all"
 alias gl="glg -5"
+
+# =============================================================================
+# Aliases de Just
+# =============================================================================
+
+# Lanzar el selector de recetas de just con tv y la documentación en el preview
+alias jtv="just --choose --chooser 'tv --preview-command \"just --show {}\"'"

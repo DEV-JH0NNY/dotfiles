@@ -30,3 +30,13 @@ install_zinit:
 deploy_zsh:
     ln -sf $(pwd)/zsh/.zshrc ~/.zshrc
     @echo "Symlink creado: ~/.zshrc -> $(pwd)/zsh/.zshrc"
+
+# Clonar la config de zsh de kevst
+clone_zsh:
+    rm -rf /tmp/nixos-config
+    git clone https://forgejo.kevst-dev.lat/kevst-dev/nixos-config.git /tmp/nixos-config
+
+    rm -rf zsh/
+
+    cp -r /tmp/nixos-config/dotfiles/zsh zsh/
+    rm -rf /tmp/nixos-config
